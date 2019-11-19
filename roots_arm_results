@@ -1,0 +1,682 @@
+chaostheory@chaostheory-X556UJ:~$ cd my_gem5/
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
+^[gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 12:42:28
+gem5 executing on chaostheory-X556UJ, pid 2609
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24087000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 12:47:11
+gem5 executing on chaostheory-X556UJ, pid 2620
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24087000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ top
+
+top - 12:48:19 up 33 min,  1 user,  load average: 0,04, 0,08, 0,26
+Tasks: 253 total,   1 running, 202 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0,6 us,  0,2 sy,  0,0 ni, 99,2 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st
+KiB Mem :  3894972 total,  1316604 free,  1353116 used,  1225252 buff/cache
+KiB Swap:  2097148 total,  2097148 free,        0 used.  2010896 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                   
+ 1551 chaosth+  20   0 3624200 205624 111692 S   1,3  5,3   0:48.18 gnome-shell                                                               
+   10 root      20   0       0      0      0 I   0,3  0,0   0:01.89 rcu_sched                                                                 
+ 1030 gdm       20   0 3369308 153984 102668 S   0,3  4,0   0:09.02 gnome-shell                                                               
+ 2038 chaosth+  20   0 2804892 263320 125024 S   0,3  6,8   1:04.87 Web Content                                                               
+ 2625 chaosth+  20   0   51352   4116   3416 R   0,3  0,1   0:00.06 top                                                                       
+    1 root      20   0  225556   9428   6856 S   0,0  0,2   0:02.29 systemd                                                                   
+    2 root      20   0       0      0      0 S   0,0  0,0   0:00.00 kthreadd                                                                  
+    3 root       0 -20       0      0      0 I   0,0  0,0   0:00.00 rcu_gp                                                                    
+    4 root       0 -20       0      0      0 I   0,0  0,0   0:00.00 rcu_par_gp                                                                
+    6 root       0 -20       0      0      0 I   0,0  0,0   0:00.00 kworker/0:0H-kb                                                           
+    7 root      20   0       0      0      0 I   0,0  0,0   0:02.12 kworker/u8:0-ev                                                           
+    8 root       0 -20       0      0      0 I   0,0  0,0   0:00.00 mm_percpu_wq                                                              
+    9 root      20   0       0      0      0 S   0,0  0,0   0:00.03 ksoftirqd/0                                                               
+   11 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/0                                                               
+   12 root     -51   0       0      0      0 S   0,0  0,0   0:00.00 idle_inject/0                                                             
+   13 root      20   0       0      0      0 I   0,0  0,0   0:00.15 kworker/0:1-eve                                                           
+   14 root      20   0       0      0      0 S   0,0  0,0   0:00.00 cpuhp/0                                                                   
+   15 root      20   0       0      0      0 S   0,0  0,0   0:00.00 cpuhp/1                                                                   
+   16 root     -51   0       0      0      0 S   0,0  0,0   0:00.00 idle_inject/1                                                             
+   17 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/1                                                               
+   18 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/1                                                               
+   20 root       0 -20       0      0      0 I   0,0  0,0   0:00.00 kworker/1:0H-kb                                                           
+   21 root      20   0       0      0      0 S   0,0  0,0   0:00.00 cpuhp/2                                                                   
+   22 root     -51   0       0      0      0 S   0,0  0,0   0:00.00 idle_inject/2                                                             
+   23 root      rt   0       0      0      0 S   0,0  0,0   0:00.01 migration/2                                                               
+   24 root      20   0       0      0      0 S   0,0  0,0   0:00.09 ksoftirqd/2                                                               
+   26 root       0 -20       0      0      0 I   0,0  0,0   0:00.00 kworker/2:0H-kb                                                           
+   27 root      20   0       0      0      0 S   0,0  0,0   0:00.00 cpuhp/3                                                                   
+   28 root     -51   0       0      0      0 S   0,0  0,0   0:00.00 idle_inject/3                                                             
+   29 root      rt   0       0      0      0 S   0,0  0,0   0:00.02 migration/3                                                               
+   30 root      20   0       0      0      0 S   0,0  0,0   0:00.02 ksoftirqd/3                                                               
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 12:48:23
+gem5 executing on chaostheory-X556UJ, pid 2626
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24087000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ nano configs/example/arm/starter_se.py 
+chaostheory@chaostheory-X556UJ:~/my_gem5$ 
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="4GB" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:05:06
+gem5 executing on chaostheory-X556UJ, pid 4854
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=4GB tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (2048 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (2048 Mbytes)
+mmap: Cannot allocate memory
+fatal: Could not mmap 4294967296 bytes for range [0:0xffffffff]!
+Memory Usage: 176152 KBytes
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="1GB" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:05:18
+gem5 executing on chaostheory-X556UJ, pid 4859
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=1GB tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24087000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="1GB" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:05:24
+gem5 executing on chaostheory-X556UJ, pid 4862
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=1GB tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24087000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:05:30
+gem5 executing on chaostheory-X556UJ, pid 4865
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24087000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" --mem-channels=4 "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:06:07
+gem5 executing on chaostheory-X556UJ, pid 4949
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB --mem-channels=4 tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24032000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" --mem-channels=4 --cpu-freq="2GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:06:50
+gem5 executing on chaostheory-X556UJ, pid 5093
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB --mem-channels=4 --cpu-freq=2GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  27375000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:06:59
+gem5 executing on chaostheory-X556UJ, pid 5096
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  24032000
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" --mem-channels=4 --cpu-freq="8GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:07:14
+gem5 executing on chaostheory-X556UJ, pid 5099
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB --mem-channels=4 --cpu-freq=8GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  21928500
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:07:51
+gem5 executing on chaostheory-X556UJ, pid 5164
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  21692750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:08:08
+gem5 executing on chaostheory-X556UJ, pid 5250
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  19977500
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="hpi" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:08:44
+gem5 executing on chaostheory-X556UJ, pid 5315
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=hpi --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: No functional unit for OpClass SimdDiv
+warn: No functional unit for OpClass SimdReduceAdd
+warn: No functional unit for OpClass SimdReduceAlu
+warn: No functional unit for OpClass SimdReduceCmp
+warn: No functional unit for OpClass SimdFloatReduceAdd
+warn: No functional unit for OpClass SimdFloatReduceCmp
+warn: No functional unit for OpClass SimdAes
+warn: No functional unit for OpClass SimdAesMix
+warn: No functional unit for OpClass SimdSha1Hash
+warn: No functional unit for OpClass SimdSha1Hash2
+warn: No functional unit for OpClass SimdSha256Hash
+warn: No functional unit for OpClass SimdSha256Hash2
+warn: No functional unit for OpClass SimdShaSigma2
+warn: No functional unit for OpClass SimdShaSigma3
+warn: No functional unit for OpClass SimdPredAlu
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  21999750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="atomic" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:09:13
+gem5 executing on chaostheory-X556UJ, pid 5321
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=atomic --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+Hello world!
+exiting with last active thread context  @  1457500
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:30:45
+gem5 executing on chaostheory-X556UJ, pid 6331
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  39996750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ 
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:31:07
+gem5 executing on chaostheory-X556UJ, pid 6334
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  39996750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="atomic" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:31:26
+gem5 executing on chaostheory-X556UJ, pid 6337
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=atomic /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  4771500
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="hpi" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:31:35
+gem5 executing on chaostheory-X556UJ, pid 6342
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=hpi /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: No functional unit for OpClass SimdDiv
+warn: No functional unit for OpClass SimdReduceAdd
+warn: No functional unit for OpClass SimdReduceAlu
+warn: No functional unit for OpClass SimdReduceCmp
+warn: No functional unit for OpClass SimdFloatReduceAdd
+warn: No functional unit for OpClass SimdFloatReduceCmp
+warn: No functional unit for OpClass SimdAes
+warn: No functional unit for OpClass SimdAesMix
+warn: No functional unit for OpClass SimdSha1Hash
+warn: No functional unit for OpClass SimdSha1Hash2
+warn: No functional unit for OpClass SimdSha256Hash
+warn: No functional unit for OpClass SimdSha256Hash2
+warn: No functional unit for OpClass SimdShaSigma2
+warn: No functional unit for OpClass SimdShaSigma3
+warn: No functional unit for OpClass SimdPredAlu
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  39502750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-channels=4 "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:32:22
+gem5 executing on chaostheory-X556UJ, pid 6350
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-channels=4 /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  39272750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-channels=4 --mem-size="1GB" --cpu-freq="8GHz" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:32:47
+gem5 executing on chaostheory-X556UJ, pid 6353
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-channels=4 --mem-size=1GB --cpu-freq=8GHz /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  34860375
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-channels=4 --mem-size="2GB" --cpu-freq="16GHz" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:32:57
+gem5 executing on chaostheory-X556UJ, pid 6356
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-channels=4 --mem-size=2GB --cpu-freq=16GHz /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  33330213
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ls
+build       configs          COPYING  hello_result  LICENSE  MAINTAINERS  README      site_scons  system      tests
+build_opts  CONTRIBUTING.md  ext      include       m5out    parsetab.py  SConstruct  src         TESTING.md  util
+chaostheory@chaostheory-X556UJ:~/my_gem5$ st
+st4topgm              startx                stdbuf                strace-log-merge      stream-im6.q16        stty
+start-pulseaudio-x11  stat                  stl2gts               stream                strings               
+start-stop-daemon     static-sh             strace                stream-im6            strip                 
+chaostheory@chaostheory-X556UJ:~/my_gem5$ st
+st4topgm              startx                stdbuf                strace-log-merge      stream-im6.q16        stty
+start-pulseaudio-x11  stat                  stl2gts               stream                strings               
+start-stop-daemon     static-sh             strace                stream-im6            strip                 
+chaostheory@chaostheory-X556UJ:~/my_gem5$ 
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ls
+build       configs          COPYING  hello_result  LICENSE  MAINTAINERS  README      site_scons  system      tests
+build_opts  CONTRIBUTING.md  ext      include       m5out    parsetab.py  SConstruct  src         TESTING.md  util
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-channels=4 --mem-size="2GB" --cpu-freq="16GHz" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:22
+gem5 executing on chaostheory-X556UJ, pid 6428
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-channels=4 --mem-size=2GB --cpu-freq=16GHz /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  33330213
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-channels=4 --mem-size="1GB" --cpu-freq="8GHz" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:25
+gem5 executing on chaostheory-X556UJ, pid 6431
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-channels=4 --mem-size=1GB --cpu-freq=8GHz /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (256 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  34860375
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="minor" --mem-channels=4 "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:32
+gem5 executing on chaostheory-X556UJ, pid 6434
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=minor --mem-channels=4 /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  39272750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="hpi" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:37
+gem5 executing on chaostheory-X556UJ, pid 6437
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=hpi /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: No functional unit for OpClass SimdDiv
+warn: No functional unit for OpClass SimdReduceAdd
+warn: No functional unit for OpClass SimdReduceAlu
+warn: No functional unit for OpClass SimdReduceCmp
+warn: No functional unit for OpClass SimdFloatReduceAdd
+warn: No functional unit for OpClass SimdFloatReduceCmp
+warn: No functional unit for OpClass SimdAes
+warn: No functional unit for OpClass SimdAesMix
+warn: No functional unit for OpClass SimdSha1Hash
+warn: No functional unit for OpClass SimdSha1Hash2
+warn: No functional unit for OpClass SimdSha256Hash
+warn: No functional unit for OpClass SimdSha256Hash2
+warn: No functional unit for OpClass SimdShaSigma2
+warn: No functional unit for OpClass SimdShaSigma3
+warn: No functional unit for OpClass SimdPredAlu
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  39502750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="atomic" "/home/chaostheory/arxitektoniki/program/arm_program"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:47
+gem5 executing on chaostheory-X556UJ, pid 6440
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=atomic /home/chaostheory/arxitektoniki/program/arm_program
+
+info: 1. command and arguments: ['/home/chaostheory/arxitektoniki/program/arm_program']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/chaostheory/arxitektoniki/program/arm_program'
+root1 = -0.75+1.20i and root2 = -0.75-1.20iexiting with last active thread context  @  4771500
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="atomic" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:53
+gem5 executing on chaostheory-X556UJ, pid 6443
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=atomic --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+Hello world!
+exiting with last active thread context  @  1457500
+chaostheory@chaostheory-X556UJ:~/my_gem5$ ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu="hpi" --mem-size="2GB" --mem-channels=4 --cpu-freq="4GHz" "tests/test-progs/hello/bin/arm/linux/hello"
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 14 2019 15:29:13
+gem5 started Nov 19 2019 13:35:59
+gem5 executing on chaostheory-X556UJ, pid 6448
+command line: ./build/ARM/gem5.opt -d hello_result configs/example/arm/starter_se.py --cpu=hpi --mem-size=2GB --mem-channels=4 --cpu-freq=4GHz tests/test-progs/hello/bin/arm/linux/hello
+
+info: 1. command and arguments: ['tests/test-progs/hello/bin/arm/linux/hello']
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+warn: No functional unit for OpClass SimdDiv
+warn: No functional unit for OpClass SimdReduceAdd
+warn: No functional unit for OpClass SimdReduceAlu
+warn: No functional unit for OpClass SimdReduceCmp
+warn: No functional unit for OpClass SimdFloatReduceAdd
+warn: No functional unit for OpClass SimdFloatReduceCmp
+warn: No functional unit for OpClass SimdAes
+warn: No functional unit for OpClass SimdAesMix
+warn: No functional unit for OpClass SimdSha1Hash
+warn: No functional unit for OpClass SimdSha1Hash2
+warn: No functional unit for OpClass SimdSha256Hash
+warn: No functional unit for OpClass SimdSha256Hash2
+warn: No functional unit for OpClass SimdShaSigma2
+warn: No functional unit for OpClass SimdShaSigma3
+warn: No functional unit for OpClass SimdPredAlu
+0: system.remote_gdb: listening for remote gdb on port 7000
+info: Entering event queue @ 0.  Starting simulation...
+warn: CP14 unimplemented crn[14], opc1[7], crm[15], opc2[7]
+Hello world!
+exiting with last active thread context  @  21999750
+chaostheory@chaostheory-X556UJ:~/my_gem5$ 
