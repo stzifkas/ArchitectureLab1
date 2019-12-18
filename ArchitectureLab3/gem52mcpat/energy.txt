@@ -1,0 +1,4 @@
+Reading simulation time from: results2.txt
+Reading simulation time from: ../Scripts/stats.txt
+leakage: 0.641628 W, dynamic: 0.100276 W and runtime: 0.003943 sec
+energy is 2.925327 mJ
